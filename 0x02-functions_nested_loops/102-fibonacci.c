@@ -1,32 +1,29 @@
-#include <stdio.h>
+#include"main.h"
 /**
- *  program that prints the first 50 Fibonacci numbers, 
- *  starting with 1 and 2, followed by a new line.
- */
-int main() 
+ * main - Entry point
+ * Description: prints the first 50 Fibonacci numbers
+ * starting with 1 and 2 folled by a new line
+ * Return: Always 0 (Success)
+*/
+int main(void)
 {
-  int i, n;
+	int count;
+	unsigned long fib1 = 0, fib2 = 1, sum;
 
-  // initialize first and second terms
-  int t1 = 1, t2 = 2;
+	for (count = 0; count < 50; ++count)
 
-  // initialize the next term (3rd term)
-  int nextTerm = t1 + t2;
+	{
+		sum = fib1 + fib2;
+		printf("%lu", sum);
 
-  // get no. of terms from user
-  printf("50");
-  scanf("%d", &n);
+		fib1 = fib2;
+		fib2 = sum;
 
-  // print the first two terms t1 and t2
-  printf("Fibonacci Series: %d, %d, ", t1, t2);
+		if (count == 49)
+			printf("\n");
+		else
+			printf(", ");
+	}
 
-  // print 3rd to nth terms
-  for (i = 3; i <= n; ++i) {
-    printf("%d, ", nextTerm);
-    t1 = t2;
-    t2 = nextTerm;
-    nextTerm = t1 + t2;
-  }
-
-  return 0;
+	return (0);
 }
