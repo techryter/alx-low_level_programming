@@ -5,9 +5,9 @@
  * @num : operand number
  * Return: number of digits
 */
-int numLenght(int num)
+int numLength(int num)
 {
-	int lenght = 0;
+	int length = 0;
 
 	if (!num)
 	{
@@ -17,9 +17,9 @@ int numLenght(int num)
 	while (num)
 	{
 		num = num / 10;
-		lenght += 1;
+		length += 1;
 	}
-	return (lenght);
+	return (length);
 }
 /**
  * main - Entry point
