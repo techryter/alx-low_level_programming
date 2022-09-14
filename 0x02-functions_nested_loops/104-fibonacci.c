@@ -1,6 +1,27 @@
 #include"main.h"
 #include <stdio.h>
 /**
+ * numLength - returns the lenth of string
+ * @num : operand number
+ * Return: number of digits
+*/
+int numLenght(int num)
+{
+	int lenght = 0;
+
+	if (!num)
+	{
+		return (1);
+	}
+
+	while (num)
+	{
+		num = num / 10;
+		lenght += 1;
+	}
+	return (lenght);
+}
+/**
  * main - Entry point
  * Description: prints the first 98 Fibonacci numbers
  * starting with 1 and 2 followed by a new line
