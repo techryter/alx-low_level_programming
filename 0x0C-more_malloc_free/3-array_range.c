@@ -8,7 +8,6 @@
  *
  * Return: pointer to newly allocated memory or NULL if fails
  */
-
 int *array_range(int min, int max)
 {
 	int i, l;
@@ -25,4 +24,4 @@ int *array_range(int min, int max)
 		a[i] = min;
 	}
 	return (a);
-i}
+}
